@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/LR_8.css">
+</head>
+
+<body>
+
+    
+    <header>
+        <div class="container">
+            <div class="header-info">
+                <img class="logo" src="/Css/logo.png" alt="">
+                <h1>С помошью нас<br> вы сможете создать то, о чем<br> <span>желаете!</span></h1>
+                <p class="offer-txt">Наши возможности + опыт позволят Вам достичь огромного успеха. Мы верим в вас! И знаем это на все 100%. Вас не остановить!</p>
+                <a href="" class="btn" >Узнать больше...</a>
+            </div>
+            <div class="header-img">
+                <img src="Css/header-img.png" alt="">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-title">
+            <h2>Что вам необходимо</h2>
+        </div>
+        <div class="main-img">
+            <div class="h3-info">
+                <img class="img-h3" src="Css/f3.png"  alt="">
+                <h3>Первый блок</h3>
+                <p>
+                    текст текст текст текст текст текст текст текст текст 
+                </p>
+            </div>
+            <div class="h3-info">
+                <img class="img-h3" src="Css/f4.png" id="movableElement" alt="">
+                <h3>Второй блок</h3>
+                <p>
+                    текст текст текст текст текст текст текст текст текст 
+                </p>
+            </div>
+            <div class="h3-info">
+                <img class="img-h3" src="Css/f5.png" alt="">
+                <h3>Третий блок</h3>
+                <p>
+                    текст текст текст текст текст текст текст текст текст 
+                </p>
+            </div>
+        </div>
+    </main>
+    <section>
+        <div class="section-form">
+            <div class="section-h2">
+                <h2>Форма заказа обратного звонка</h2>
+            </div>
+            <div class="form-field">
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <input type="text" name="username" class="text-fiel" placeholder="Имя" required minlength="5">
+                    <input type="email" name="usermail" class="text-fiel" placeholder="Введите свой E-mail" required>
+                    <input type="tel" name="usertel" class="text-fiel" placeholder="Телефон" required>
+                    <input type="text" name="userthem" class="text-fiel" placeholder="Какая тема Вас интересует?" required>
+                    <button class="form-btn" id = "chng-btn" type="button">Отправить вопрос!</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="forma-validat">
+        <div class="order-forms">
+            <form class="order-information">
+                <h2>Order Information</h2>
+                <div class="ord-field">
+                    <div class="order-txt" >First Name:</div>
+                    <div class="inprr"><input type="text" class="order-inp" id="first"  onblur="checkFirst();" required></div>
+                    <div class="spanchrr"><span id="first_Check"></span></div>
+                    
+                </div>
+                <div class="ord-field">
+                    <div class="order-txt" >Last Name:</div>
+                    <div class="inprr"><input type="text" class="order-inp" id="last" onblur="checkLast();" required ></div>
+                    <div class="spanchrr"><span id="last_Check"></span></div>
+                    
+                </div>
+                <div class="ord-field">
+                    <div class="order-txt">Phone Number:</div>
+                    <div class="inprr"><input class="order-inp" placeholder="XXX-XXX-XXX"  id="phone" type="text" onblur="checkPhone();"></div>
+                    <div class="spanchrr"><span id="phone_Check"></span></div>
+                    
+                </div>
+                <div class="ord-field">
+                    <div class="order-txt" >Destination:</div>
+                    <div class="inprr"><input type="text" class="order-inp" id="dest" onblur="checkDest();" required></div>
+                    <div class="spanchrr"><span id="dest_Check"></span></div>
+                    
+                </div>
+                <div class="ord-field double-field">
+                    <div class="order-txt">Date and Time:</div>
+                    <div class = "double-ord-field">
+                        <input type="date" id="date" class="order-inp" required>
+                        <input type="time" id="time" class="order-inp" required>
+                    </div>
+                    <div class="spanchrr"></div>
+                </div>
+                <div class="ord-field">
+                    <div class="order-txt">Quantity:</div>
+                    <div class="inprr"><input class="order-inp" id="quantity" type="number" min="1" max="5" required></div>
+                    <div class="spanchrr"></div>
+                </div>
+                <div class="ord-field">
+                    <div class="order-txt">Payment:</div>
+                    <select class="form-control" name="paymethod" id="paymethod" required>
+                        <option>Cash</option>
+                        <option>Card</option>
+                        <option>PayPal</option>
+                    </select>
+                    <div class="spanchrr"></div>
+                </div>
+                <div class="ord-field-btn" >
+                    <div class="order-txt"></div>
+                    <div class="form-btn-order" type="post" id="sendOrder" onclick="outputData();">Send Order</div>
+                    <div class="spanchrr"></div>
+                </div>
+            </form>
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <span id="summary"></span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-info">
+            <div>@ Все на этом сайте защищенно</div>
+            
+        </div>
+    </footer>
+    <script src="JS/JavaScript.js"></script>
+</body>
+</html>
